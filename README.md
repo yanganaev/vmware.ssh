@@ -4,42 +4,42 @@
 
 Доступные команды консоли ESXi можно посмотреть в каталоге /usr/sbin.
 
-cd /usr/sbin
-ls
+``cd /usr/sbin
+ls``
 
 Совет. Обратите внимание, что все команды esxi регистрозависимы.
 все консольные команды esxi 
 
 Полный список команд esxcli можно вывести с помощью команды:
 
-esxcli esxcli command list
+`esxcli esxcli command list`
 
 вывести все команды esxcli 
 
 Для начала команды ESXi, которые вы можете выполнять через ssh доступ.
 
-reboot — перезагрузить хост
-poweroff — выключить хост
-esxcli system version get — узнать версию (номер) инсталлированной версии VMware ESXi
-uname -a — так же узнать версию VMware ESXi
+`reboot` — перезагрузить хост
+`poweroff` — выключить хост
+`esxcli system version get` — узнать версию (номер) инсталлированной версии VMware ESXi
+`uname -a` — так же узнать версию VMware ESXi
 узнать версию VMware ESXi
 
-vmware –vl – и еще один способ узнать версию и релиз VMware ESXi
+`vmware –vl` – и еще один способ узнать версию и релиз VMware ESXi
 получить номер установленной версии ESXi
 
-esxcli hardware pci list | more — полная информация об установленных PCI устройствах
-lspci — краткая информация обо всех установленных PCI устройствах
-esxtop — диспетчер процессов top для vmware esxi (быстрые клавиши для переключения дисплея: c:cpu, i:interrupt, m:memory, n:network, d:disk adapter, u:disk device, v:disk VM,p:power mgmt)
-vmkerrcode -l — расшифровка кодов ошибок
-esxcfg-nics -l — информация о сетевых картах
-esxcfg-vswitch -l — информация о виртуальных коммутаторах
-find . -name libstorelib.so — найти файл libstorelib.so
+`esxcli hardware pci list | more` — полная информация об установленных PCI устройствах
+`lspci` — краткая информация обо всех установленных PCI устройствах
+`esxtop` — диспетчер процессов top для vmware esxi (быстрые клавиши для переключения дисплея: c:cpu, i:interrupt, m:memory, n:network, d:disk adapter, u:disk device, v:disk VM,p:power mgmt)
+`vmkerrcode -l` — расшифровка кодов ошибок
+`esxcfg-nics -l` — информация о сетевых картах
+`esxcfg-vswitch -l` — информация о виртуальных коммутаторах
+`find . -name libstorelib.so` — найти файл libstorelib.so
 поиск файла на ESXi
 
-dcui — работа с консолью сервера через ssh сессию
-chkconfig -l — статус работы демонов
-esxcli hardware memory get — размер установленной памяти
-esxcli software vib list — список установленных vib-пакетов
+`dcui` — работа с консолью сервера через ssh сессию
+`chkconfig -l` — статус работы демонов
+`esxcli hardware memory get` — размер установленной памяти
+`esxcli software vib list` — список установленных vib-пакетов
 esxcli network ip connection list — состояние активных соединений (аналог netstat)
 esxcli storage vmfs extent list — информация о примонтированных/подключенных томах VMFS
 esxcli hardware clock (get/set) — отображение/установка времени esxi-хоста
